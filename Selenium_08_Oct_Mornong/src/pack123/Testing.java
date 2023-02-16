@@ -42,6 +42,8 @@ public class Testing {
 	public static void main(String[] args) throws IOException, InterruptedException  {
 		
 		System.setProperty("Webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32 (4)\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32 (4)\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32 (4)\\chromedriver.exe");
 	
 		WebDriver driver = new ChromeDriver();
 		
