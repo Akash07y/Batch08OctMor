@@ -59,6 +59,11 @@ public class Testing {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.get("https://www.facebook.com/");
+		driver.get("https://www.facebook.com/");
+		driver.get("https://www.facebook.com/");
+		driver.get("https://www.facebook.com/");
+		driver.get("https://www.facebook.com/");
+		
 		
 		// Implict wait sarat -> on NoSuchElementExcaption 10 sec
 		WebElement user = driver.findElement(By.xpath("//input[@id='email']"));
