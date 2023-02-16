@@ -42,13 +42,13 @@ public class Testing {
 	public static void main(String[] args) throws IOException, InterruptedException  {
 		
 		System.setProperty("Webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32 (4)\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32 (4)\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32 (4)\\chromedriver.exe");
 	
 		WebDriver driver = new ChromeDriver();
 		
 		// Implicit  => Waiting Time => throughout the browser
-		
-		rd = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='pass']")));
-		password.sendKeys("123234343");
+password.sendKeys("123234343");
 
 		// Explicit Wait - 500ms
 //		2.1sec
