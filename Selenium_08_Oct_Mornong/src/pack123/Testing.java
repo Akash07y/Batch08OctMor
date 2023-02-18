@@ -51,7 +51,8 @@ public class Testing {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
 		
 		//4.0.0
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		
 		driver.get("https://www.facebook.com/");
 		
