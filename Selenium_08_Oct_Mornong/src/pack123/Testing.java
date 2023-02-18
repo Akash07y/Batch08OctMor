@@ -48,7 +48,29 @@ public class Testing {
 		WebDriver driver = new ChromeDriver();
 		
 		// Implicit  => Waiting Time => throughout the browser
-password.sendKeys("123234343");
+	
+		// 3.141.59                        //deprecated methods 
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
+		
+		//4.0.0
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		
+		driver.get("https://www.facebook.com/");
+		
+		// Implict wait sarat -> on NoSuchElementExcaption 10 sec
+		WebElement user = driver.findElement(By.xpath("//input[@id='email']"));
+		user.sendKeys("Velocity");
+		
+		// Explicit Wait   =>  Waiting Time + Condition (Frequency 500mSec of interval)
+		                                    // WebDriver, long
+		//WebDriverWait wait = new WebDriverWait(driver, 20 ); // 20 Sec
+		
+		                                             // Maximum waiting time
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25) );	
+		                              // Condition                             // 20   10 => 21, 22 , 23 , 26....
+		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='pass']")));
+		password.sendKeys("123234343");
 
 		// Explicit Wait - 500ms
 //		2.1sec
